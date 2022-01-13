@@ -1,15 +1,11 @@
 import React from 'react'
 
-function reformatKey(key){
-    return key.replace(/([a-z](?=[A-Z]))/g, '$1 ')
-}
-
 export default function Cell(props){
     return (
         <div style={styles.cellStyle}>
-            <p style={styles.titleStyle}>{props.info.LocationText}</p>
+            <p style={styles.titleStyle}></p>
             <ul style={styles.tableStyle}>
-                {Object.keys(props.info).map((k) => <li key={k} style={styles.rowStyle}>{`${reformatKey(k)}: ${props.info[k]}`}</li>)}
+                {<li key={props.zipcode} style={styles.rowStyle}>{props.zipcode}</li>}
             </ul>
         </div>
     )

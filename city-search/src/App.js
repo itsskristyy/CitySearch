@@ -1,24 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InfoTable from "./components/InfoTable";
 import NavBar from "./components/NavBar";
 import SearchBar from "./components/SearchBar";
-
-const sampleData = ["05343","11405","11411","11412","11413"]
-
+import queryCity from "./script/queryCity";
 
 function App() {
-  const [data, setData] = useState(sampleData) // need to be linkd to queryZipcode function
+  const [data, setData] = useState([])
+  const [curSearch, setCurSearch] = useState("SPRINGFIELD")
 
+
+  useEffect(
+    () => {
+      (queryCity(curSearch || "SPRINGFIELD", setData))
+    },
+    [curSearch]
+  )
 
   return (
     <div className="App">
       <header className="App-header">
       </header>
-      {  <NavBar/> /* Navbar goes here */}
-
-        <SearchBar />
-
-      {/* search bar goes here (calls queryzipcode function)*/}
+      <NavBar/>
+      <SearchBar setCurSearch={setCurSearch}/>
       <InfoTable data={data}/>
     </div>
   );
