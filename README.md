@@ -1,3 +1,2 @@
 # CitySearch
-Yankang Xue
-Kristy Delacruz
+Yankang Xue & Kristy Delacruz
