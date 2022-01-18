@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/CitySearch/static/js/main.870cc0a3.js",
+    "index.html": "/CitySearch/index.html",
+    "main.870cc0a3.js.map": "/CitySearch/static/js/main.870cc0a3.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.870cc0a3.js"
+  ]
+}
